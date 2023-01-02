@@ -7,3 +7,11 @@ export async function initializeDB(): Promise<void> {
     await createConnection();
 };
 
+
+export function initializeCache(port: number | undefined) : unknown {
+    const tedis = new Tedis({
+        port: port,
+        host: "127.0.0.1"
+    });
+    return tedis; 
+}

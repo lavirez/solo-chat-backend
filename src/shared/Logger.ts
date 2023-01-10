@@ -1,8 +1,8 @@
-import { createLogger, format, trasnports } from "winston"; 
+import { createLogger, format, transports } from "winston"; 
 
 const { File, Console } = transports;
 
-const logger = createlogger({
+const logger = createLogger({
     level: 'info', 
 }); 
 
@@ -22,5 +22,4 @@ const errorStackFormat = format((info) => {
        ),
    });
    logger.add(consoleTransport);
-}
 export default logger;
